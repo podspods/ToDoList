@@ -8,7 +8,6 @@ export default function Menu() {
   return (
     <>
       {/* 4. le visuel---------------------------------- */}
-      <h1> Menu</h1>
       <MenuContainer>
         <MenuItem>
           <Link to="/" >
@@ -18,6 +17,11 @@ export default function Menu() {
         <MenuItem>
           <Link to="/Subscription" >
           Subscription
+          </Link>
+        </MenuItem>
+        <MenuItem>
+          <Link to="/TodoList" >
+          TodoList
           </Link>
         </MenuItem>
         <MenuItem>

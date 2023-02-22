@@ -9,17 +9,25 @@ import { createGlobalStyle } from "styled-components";
  * for the whole application
  */
 export const AppTheme = {
-  colors: {
-    dark: "#202020",
-    lessDark: "#333533",
-    medium: "#ffd100",
-    lessLight: "#ffee32",
-    light: "#d6d6d6",
+  mainColors: {
+    back: "#075252",
+    lessback: "#075252",
+    mid: "#557859",
+    lessfore: "#EDFFFB",
+    fore: "#EDFFFB",
   },
+  subColors: {
+    back: "#BB8579",
+    lessback: "#BB8579",
+    mid: "#BB8579",
+    lessfore: "#BB8579",
+    fore: "#F5F5F5",
+  },
+
   font: {
-    regular: "Sora,sans-serif",
-    extra: "Sora,sans-serif",
-    Logo: "Sora,sans-serif",
+    regular: "Poppins,sans-serif",
+    extra: "Lobster,sans-serif",
+    Logo: "Lobster,sans-serif",
   },
   BorderRadius: "0.6rem",
 };
@@ -30,7 +38,7 @@ export const App = styled.div`
   justify-content: flex-end;
   text-align: center;
   align-items: center;
-  margin : 1rem;
+  margin: 1rem;
   padding: 1rem;
 `;
 
@@ -39,7 +47,7 @@ export const App = styled.div`
  */
 export const AppGlobalStyle = createGlobalStyle`
   :root {
-    background-color:${AppTheme.colors.light}
+    background-color:${AppTheme.mainColors.back}
   }
   html, body, #root {
     margin: 0;
@@ -59,6 +67,3 @@ export const AppGlobalStyle = createGlobalStyle`
     display: none;
   }
 `;
-
-
-

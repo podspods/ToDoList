@@ -34,3 +34,40 @@ store : contient les informations
 2. déclaration de 2 fonction action checkmail et checkpass
 
 3. creation d'un ecran de test OutputTest.tsx pour tester les valeurs du store SubscribeStore
+
+## chech pass
+
+[ressource ici](https://regex101.com/)
+
+regexp
+
+```js
+^(?=[^a-z]*[a-z])(?=[^A-Z]*[A-Z])(?=.*[0-9].*[0-9])(?=.*[!@#$&*]) {6,32}$
+```
+
+```
+^                         Start anchor
+(?=.*[A-Z])        Ensure string has one uppercase letters.
+(?=.*[!@#$&*])            Ensure string has one special case letter.
+(?=.*[0-9])        Ensure string has one digits.
+.{6,32}                      Ensure string is of length 6 to32.
+$
+```
+
+## chech email
+
+regexp
+
+```bash
+^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$
+```
+
+```
+-------------------
+^ |                        Start anchor|
+$| end|
+```
+
+## Schéma réactif
+
+![Schema réactif](./image/todolist-schema-reactif.png)

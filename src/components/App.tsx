@@ -5,6 +5,7 @@ import Accueil from "./Accueil";
 import Menu from "./Menu";
 import OutputTest from "./OutputTest";
 import Subscription from "./Subscription";
+import TodoList from "./TodoList";
 /**
  * main component for the application
  * @returns
@@ -31,7 +32,10 @@ export default function App() {
             <Route path="/" element={<Accueil />} />
             <Route path="/Subscription" element={<Subscription />} />
             <Route path="/outputTest" element={<OutputTest />} />
+            <Route path="/TodoList" element={<TodoList />} />
           </Routes>
       </BrowserRouter>
     </StrictMode>  );
 }
+
+

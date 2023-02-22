@@ -7,7 +7,7 @@ import { AppTheme } from './App.style'
  * Container for the open menu
  */
 export const MenuContainer = styled.div`
-  background-color: ${AppTheme.colors.dark};
+  background-color: ${AppTheme.mainColors.back};
   display: flex;
   /* flex-direction: column; */
   align-items: stretch;
@@ -23,7 +23,7 @@ export const MenuContainer = styled.div`
 export const MenuHeader = styled.div`
   display: flex;
   padding: 1rem;
-  color: ${AppTheme.colors.light};
+  color: ${AppTheme.mainColors.fore};
   align-items: center;
   i {
     font-size: 1.4rem;
@@ -31,7 +31,7 @@ export const MenuHeader = styled.div`
     margin-right: 1rem;
   }
   p {
-    color: ${AppTheme.colors.light};
+    color:${AppTheme.mainColors.fore};
     font-size: 2rem;
     margin: 0;
     font-weight: bold;
@@ -43,14 +43,14 @@ export const MenuHeader = styled.div`
  */
 export const MenuItem = styled.p`
   font-size: .8rem;
-  color: ${AppTheme.colors.light};
+  color: ${AppTheme.mainColors.fore};
   padding: 1rem;
   margin: 0;
   a {
     text-decoration: none;
     outline: none;
     border: none;
-    color: ${AppTheme.colors.light};
+    color: ${AppTheme.mainColors.fore};
   }
 `
 

@@ -1,4 +1,5 @@
-import { checkEmail, checkPass } from "../store/Subscription.store";
+import { useStore } from "@nanostores/react";
+import { setEmail, setPassword,  subScriptionStore } from "../store/Subscription.store";
 /**
  * this component display screen subscrib (screen 1)
  * allow to get username (as an email) and password.
@@ -6,20 +7,23 @@ import { checkEmail, checkPass } from "../store/Subscription.store";
  */
 
 export default function Subscription() {
-
+  const { email, password,emailChecked,passwordChecked } = useStore(subScriptionStore);
   return (
     <>
       <h1>Inscription</h1>
       <input
         type="email"
-        onChange={(e) => checkEmail(e.currentTarget.value)}
+        value={email}
+        onChange={setEmail}
         name="email"
-      />
+      /> <p>[{ emailChecked ? "true" : "false"}]</p>
       <input
-        type="text"
-        onChange={(e) => checkPass(e.currentTarget.value)}
+        type="password"
+        value={password}
+        onChange={setPassword}
         name="password"
       />
+      <p>[{ passwordChecked ? "true" : "false"}]</p>
       <button>S'inscrire</button>
       <p>Vous avez un compte? Connectez vous</p>
     </>
